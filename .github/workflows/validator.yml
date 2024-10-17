@@ -1,0 +1,14 @@
+name: Safe Settings Validator
+on:
+  pull_request:
+    paths:
+      - '.github/suborgs/**'
+      - '.github/repos/**'
+      - '.github/settings.yml'
+  workflow_dispatch:
+jobs:
+  print-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the current date
+        run: date
